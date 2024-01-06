@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yjmadeira/static/css/main.685be13a.css",
+    "main.js": "/yjmadeira/static/js/main.ab293bf1.js",
+    "static/media/1.jpg": "/yjmadeira/static/media/1.715b26869ffec5b3182c.jpg",
+    "static/media/logo_header.jpg": "/yjmadeira/static/media/logo_header.752030c68a543fca91ae.jpg",
+    "index.html": "/yjmadeira/index.html",
+    "main.685be13a.css.map": "/yjmadeira/static/css/main.685be13a.css.map",
+    "main.ab293bf1.js.map": "/yjmadeira/static/js/main.ab293bf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.685be13a.css",
+    "static/js/main.ab293bf1.js"
+  ]
+}
