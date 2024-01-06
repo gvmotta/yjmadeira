@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from './components/Carousel';
+import HeaderBox from './components/Header';
+import { Ambientes, BottomHero } from './styles';
+import { SobreContainer } from './components/Sobre';
+import { Card } from './components/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderBox />
+      <main>
+        <Carousel />
+        <BottomHero>
+          <h4>Móveis de forma artesanal</h4>
+        </BottomHero>
+        <SobreContainer />
+        <div className="ambientesContainer">
+          <div className="container">
+            <div className="texto">
+              <h4>Marcenaria em Jundiaí e região</h4>
+              <p>Projetamos móveis planejados para os mais variados segmentos, de sua residência a sua empresa, serviço feito com respeito, compromisso e foco na entrega de planejados de qualidade, acompanhe no nosso portfólio alguns projetos desenvolvidos ao longo de nossa jornada. Bem-vindo!</p>
+            </div>
+            <Ambientes>
+              <div className="row">
+                <div className="col-6 mb-4">
+                  <Card fontawesome="faToilet" title="Banheiros" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                </div>
+                <div className="col-6 mb-4">
+                  <Card fontawesome="faKitchenSet" title="Cozinhas" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-6">
+                  <Card fontawesome="faBed" title="Quartos" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                </div>
+                <div className="col-6">
+                  <Card fontawesome="faScrewdriverWrench" title="Outros" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                </div>
+              </div>
+            </Ambientes>
+          </div>
+        </div>
+      </main>
+    </>
   );
 }
 
 export default App;
+
