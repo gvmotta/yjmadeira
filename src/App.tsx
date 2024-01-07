@@ -1,17 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from './components/Carousel';
+import { SimpleSlider } from './components/Carousel';
 import HeaderBox from './components/Header';
 import { Ambientes, BottomHero } from './styles';
 import { SobreContainer } from './components/Sobre';
 import { Card } from './components/Card';
+import img from './assets/img/carousel/1.jpg'
 
 function App() {
+  const slides = [
+    { img: img, textsFadeInLeft: 'Pergolados', textsFadeInRightTop: 'Alto padrão', textsFadeInRightBottom: 'Sofisticação', textsFadeInBottom: 'Arte em madeira', textButton: 'Conheça' },
+    { img: img, textsFadeInLeft: 'Pergolados', textsFadeInRightTop: 'Alto padrão', textsFadeInRightBottom: 'Sofisticação', textsFadeInBottom: 'Arte em madeira', textButton: 'Conheça' }
+    
+  ]
   return (
     <>
       <HeaderBox />
       <main>
-        <Carousel />
+        <SimpleSlider slides={slides}/>
         <BottomHero>
           <h4>Móveis de forma artesanal</h4>
         </BottomHero>

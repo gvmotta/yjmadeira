@@ -5,7 +5,8 @@ export const colors = {
     whatsapp: '#4CC85A',
     white: '#fff',
     black: '#000',
-    orangePrincipal: '#E77112',
+    orangePrincipal: '#E77112', 
+    orangePrincipalOpacity: 'rgba(231, 113, 18, .8)', 
     brown: '#8D5200',
     brownSecundary: '#B98746'
 }
@@ -20,6 +21,95 @@ export const GlobalStyled = createGlobalStyle`
     body {
         color: ${colors.black};
     }
+    @-webkit-keyframes fadeInLeft {
+        0% {
+           opacity: 0;
+           -webkit-transform: translateX(-300px);
+        }
+        100% {
+           opacity: 1;
+           -webkit-transform: translateX(0);
+        }
+    }
+     
+    @keyframes fadeInLeft {
+        0% {
+           opacity: 0;
+           transform: translateX(-300px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateX(0);
+        }
+    }
+     
+    .fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }  
+
+    .fadeInRight {
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeInRight {
+        0% {
+           opacity: 0;
+           -webkit-transform: translateX(300px);
+        }
+        100% {
+           opacity: 1;
+           -webkit-transform: translateX(0);
+        }
+    }
+     
+    @keyframes fadeInRight {
+        0% {
+           opacity: 0;
+           transform: translateX(300px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateX(0);
+        }
+    }
+    @-webkit-keyframes fadeInBottom {
+        0% {
+           opacity: 0;
+           -webkit-transform: translateY(300px);
+        }
+        100% {
+           opacity: 1;
+           -webkit-transform: translateY(0);
+        }
+    }
+     
+    @keyframes fadeInBottom {
+        0% {
+           opacity: 0;
+           transform: translateY(300px);
+        }
+        100% {
+           opacity: 1;
+           transform: translateY(0);
+        }
+    }
+    .fadeInBottom {
+        -webkit-animation-name: fadeInBottom;
+        animation-name: fadeInBottom;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }  
 `
 
 export const BottomHero = styled.div`
@@ -39,6 +129,5 @@ export const BottomHero = styled.div`
     }
 `
 export const Ambientes = styled.div`
-    background: src(./)
     
 `

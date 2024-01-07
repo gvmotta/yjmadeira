@@ -1,48 +1,50 @@
-import React from 'react'
-import img from '../../assets/img/carousel/1.jpg'
+import React, { Component } from 'react'
 import { CarouselBox } from './styles';
-import 'animate.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { SimpleSliderProps, SimpleSliderState } from './types';
 
-export const Carousel = () => {
+export class SimpleSlider extends Component<SimpleSliderProps, SimpleSliderState> {
+  state = {
+    activeSlide: 0
+  };
+  slides = []
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1, 
+      beforeChange: (current: number, next: number) => this.setState({ activeSlide: next }),
+      afterChange: (current: number) => this.setState({ activeSlide: current })
+    };  
   return (
-    <CarouselBox id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption text-center text-md-end">
-              <h5 className='animate__animated animate__fadeInRightBig'>Alto Padrão</h5>
-            </div>
+    <CarouselBox>
+        <Slider {...settings}>
+          {this.props.slides.map((slide, index) => (
+            <div key={index}>
+            {index === this.state.activeSlide && (
+              <>
+              <div className="text-container">
+                  <h4 className="fadeInLeft fadeInLeftText">{slide.textsFadeInLeft}</h4>
+                <div className="column">
+                  <h4 className="fadeInRight fadeInRightText mb-2">{slide.textsFadeInRightTop}</h4>
+                  <h4 className="fadeInRight fadeInRightText">{slide.textsFadeInRightBottom}</h4>
+                </div>
+              </div>
+              <div className="vertical">
+                <h4 className='fadeInBottom fadeInBottomText'>{slide.textsFadeInBottom}</h4>
+                <button className='fadeInBottom bottomCarousel'>{slide.textButton}</button>
+              </div>
+              </>
+            )}
+            <img src={slide.img} alt="" />
           </div>
-          <div className="carousel-item">
-            <img src={img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption text-center text-md-end">
-              <h5>Second slide label</h5>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img src={img} className="d-block w-100" alt="..." />
-            <div className="carousel-caption text-center text-md-end">
-              <h5>Third slide label</h5>
-            </div>
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <div className="change-image-button-carousel">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            </div>  
-              <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <div className="change-image-button-carousel">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            </div>
-              <span className="visually-hidden">Next</span>
-        </button>
+          ))}
+        </Slider>
       </CarouselBox>
   )
+  }
 }

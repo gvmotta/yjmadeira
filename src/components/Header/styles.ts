@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from "../../styles";
 import { device } from "../../assets/sizes";
 export const Header = styled.header`
-
     .upper {
         background: ${colors.orangePrincipal};
         display: flex;
@@ -10,8 +9,9 @@ export const Header = styled.header`
         flex-direction: column;
         padding: 5px 0;
         font-size: 12px;
+        font-weight: 600;
         color: ${colors.white};
-        
+        height: 8dvh;
         p {
             margin: 0;
         }
@@ -36,6 +36,7 @@ export const Header = styled.header`
 
         @media ${device.mobileL} {
             flex-direction: row;
+            height: 5dvh;
         }
     }
 
@@ -46,7 +47,7 @@ export const Header = styled.header`
         justify-content: space-between;
         align-items: center;
         width: 100%;
-
+        
         .logo {
             margin-left: 10px;
             img {
@@ -54,6 +55,7 @@ export const Header = styled.header`
             }
         }
         nav {
+            padding: 0.2rem 0;
             display: flex;
             ul {
                 display: flex;
