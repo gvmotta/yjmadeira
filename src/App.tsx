@@ -6,6 +6,7 @@ import { Ambientes, BottomHero } from './styles';
 import { SobreContainer } from './components/Sobre';
 import { Card } from './components/Card';
 import img from './assets/img/carousel/1.jpg'
+import deck from './assets/img/card-background.jpg';
 
 function App() {
   const slides = [
@@ -29,20 +30,24 @@ function App() {
               <p>Projetamos móveis planejados para os mais variados segmentos, de sua residência a sua empresa, serviço feito com respeito, compromisso e foco na entrega de planejados de qualidade, acompanhe no nosso portfólio alguns projetos desenvolvidos ao longo de nossa jornada. Bem-vindo!</p>
             </div>
             <Ambientes>
-              <div className="row">
-                <div className="col-6 mb-4">
-                  <Card fontawesome="faToilet" title="Banheiros" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+              <div className="row mb-4">
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Pergolados" src={img}/>
                 </div>
-                <div className="col-6 mb-4">
-                  <Card fontawesome="faKitchenSet" title="Cozinhas" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Decks" src={deck}/>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col-6">
-                  <Card fontawesome="faBed" title="Quartos" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Quartos" src={img}/>
                 </div>
-                <div className="col-6">
-                  <Card fontawesome="faScrewdriverWrench" title="Outros" content="Gabinetes projetados para banheiros, adaptados ao seu ambiente e madeira de qualidade" />
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Outros" src={img} />
+                </div>
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Outros" src={img} />
+                </div>
+                <div className="col-sm-6 col-md-4 mb-3">
+                  <Card title="Outros" src={img} />
                 </div>
               </div>
             </Ambientes>

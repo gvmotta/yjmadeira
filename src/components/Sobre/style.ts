@@ -37,5 +37,28 @@ export const Sobre = styled.div`
         height: 300px;
         object-fit: cover;
     }
-    
+    #carousel {
+        padding-top: 0;
+        
+        @media ${device.tablet} {
+            padding-top: 4rem;
+        }
+        .slick-slider {
+            
+        }
+        button::before {
+            color: ${colors.black};
+        }
+        .slick-dots {
+            
+        }
+        .slick-prev {
+            left: 25px;
+            z-index: 1;
+        }
+        .slick-next {
+            right: 25px;
+        }
+        
+    }
 `

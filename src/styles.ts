@@ -97,6 +97,9 @@ export const GlobalStyled = createGlobalStyle`
            opacity: 0;
            transform: translateY(300px);
         }
+        20% {
+            opacity: 0;
+        }
         100% {
            opacity: 1;
            transform: translateY(0);
