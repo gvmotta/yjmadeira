@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/yjmadeira/static/css/main.685be13a.css",
-    "main.js": "/yjmadeira/static/js/main.ab293bf1.js",
+    "main.css": "/yjmadeira/static/css/main.05fc5e08.css",
+    "main.js": "/yjmadeira/static/js/main.1ab49cb4.js",
+    "static/media/card-background.jpg": "/yjmadeira/static/media/card-background.0d4f2e7c91905063397d.jpg",
     "static/media/1.jpg": "/yjmadeira/static/media/1.715b26869ffec5b3182c.jpg",
     "static/media/logo_header.jpg": "/yjmadeira/static/media/logo_header.752030c68a543fca91ae.jpg",
+    "static/media/slick.svg": "/yjmadeira/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/yjmadeira/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/yjmadeira/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/yjmadeira/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/yjmadeira/index.html",
-    "main.685be13a.css.map": "/yjmadeira/static/css/main.685be13a.css.map",
-    "main.ab293bf1.js.map": "/yjmadeira/static/js/main.ab293bf1.js.map"
+    "main.05fc5e08.css.map": "/yjmadeira/static/css/main.05fc5e08.css.map",
+    "main.1ab49cb4.js.map": "/yjmadeira/static/js/main.1ab49cb4.js.map"
   },
   "entrypoints": [
-    "static/css/main.685be13a.css",
-    "static/js/main.ab293bf1.js"
+    "static/css/main.05fc5e08.css",
+    "static/js/main.1ab49cb4.js"
   ]
 }
