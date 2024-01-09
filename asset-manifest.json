@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yjmadeira/static/css/main.05fc5e08.css",
-    "main.js": "/yjmadeira/static/js/main.1ab49cb4.js",
+    "main.js": "/yjmadeira/static/js/main.8791ba99.js",
     "static/media/card-background.jpg": "/yjmadeira/static/media/card-background.0d4f2e7c91905063397d.jpg",
     "static/media/1.jpg": "/yjmadeira/static/media/1.715b26869ffec5b3182c.jpg",
     "static/media/logo_header.jpg": "/yjmadeira/static/media/logo_header.752030c68a543fca91ae.jpg",
@@ -11,10 +11,10 @@
     "static/media/slick.woff": "/yjmadeira/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/yjmadeira/index.html",
     "main.05fc5e08.css.map": "/yjmadeira/static/css/main.05fc5e08.css.map",
-    "main.1ab49cb4.js.map": "/yjmadeira/static/js/main.1ab49cb4.js.map"
+    "main.8791ba99.js.map": "/yjmadeira/static/js/main.8791ba99.js.map"
   },
   "entrypoints": [
     "static/css/main.05fc5e08.css",
-    "static/js/main.1ab49cb4.js"
+    "static/js/main.8791ba99.js"
   ]
 }
