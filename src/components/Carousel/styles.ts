@@ -22,8 +22,13 @@ export const CarouselBox = styled.div`
         margin-right: 10px;
         z-index: 1;
     }
-    .slick-prev, .slick-next {
-        
+    .slick-arrow {
+        height: 30px;
+        width: 30px;
+    }
+    .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.9);
     }
     .slick-dots {
         bottom: 0;
@@ -34,27 +39,26 @@ export const CarouselBox = styled.div`
     }
     .text-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         position: absolute;
-        bottom: 60%;
+        bottom: 28%;
         width: 100dvw;
     }
     .vertical {
         display: flex;
         flex-direction: column;
-        position: absolute;
         justify-content: center;
         width: 100dvw;
-        bottom: 25%;
         text-align: center;
-        
     }
     .bottomCarousel {
         width: 20dvw;
+        min-width: 130px;
         display: flex;
         margin: 0 auto;
         justify-content: center;
-        background-color: ${colors.orangePrincipalOpacity};
+        background-color: ${colors.orangePrincipal};
         color: ${colors.white};
         padding: 5px 0;
         font-size: 1.5rem;
@@ -92,5 +96,26 @@ export const CarouselBox = styled.div`
         font-weight: 300;
         margin: 0 auto 20px;
         border-radius: 15px 15px 15px 0;
+    }
+    @media (max-width: 595px) {
+        .fadeInBottomText {
+            font-size: 2rem;
+        }
+        .fadeInLeftText {
+            padding: 5px 10px;
+            font-size: 2rem;
+        }
+    }
+    @media (max-width: 377px) {
+        .fadeInBottomText {
+            font-size: 1.5rem;
+        }
+        .fadeInLeftText {
+            padding: 5px 10px;
+            font-size: 1.5rem;
+        }
+        .fadeInRightText {
+            font-size: 0.8rem;
+        }
     }
 `

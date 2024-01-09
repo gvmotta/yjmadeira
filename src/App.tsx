@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { SimpleSlider } from './components/Carousel';
 import HeaderBox from './components/Header';
 import { Ambientes, BottomHero } from './styles';
-import { SobreContainer } from './components/Sobre';
+import { CenterMode  } from './components/Sobre';
 import { Card } from './components/Card';
 import img from './assets/img/carousel/1.jpg'
 import deck from './assets/img/card-background.jpg';
@@ -22,7 +22,7 @@ function App() {
         <BottomHero>
           <h4>Móveis de forma artesanal</h4>
         </BottomHero>
-        <SobreContainer />
+        <CenterMode  />
         <div className="ambientesContainer">
           <div className="container">
             <div className="texto">

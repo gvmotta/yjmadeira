@@ -3,7 +3,6 @@ import { colors } from "../../styles";
 import { device } from "../../assets/sizes";
 
 export const Sobre = styled.div`
-    padding: 26px 0;
     .row {
         margin: 0;
     }
@@ -32,20 +31,20 @@ export const Sobre = styled.div`
         justify-content: center;
         align-items: center;
     }
-    img {
+    .imgCarousel {
         width: 100%;
         height: 300px;
         object-fit: cover;
     }
     #carousel {
         padding-top: 0;
-        
+        @media (max-width: 767px){
+            margin-bottom: 3rem;
+        }
         @media ${device.tablet} {
             padding-top: 4rem;
         }
-        .slick-slider {
-            
-        }
+        
         button::before {
             color: ${colors.black};
         }
@@ -60,5 +59,16 @@ export const Sobre = styled.div`
             right: 25px;
         }
         
+    }
+    .slick-dots {
+        position: absolute;
+        bottom: -50px;
+    }
+    .slick-dots li {
+        width: auto;
+    }
+    .slick-dots img {
+        width: auto;
+        height: 50px;
     }
 `

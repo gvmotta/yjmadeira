@@ -3,19 +3,30 @@ import { Sobre } from './style'
 import aboutPhoto from '../../assets/img/carousel/1.jpg';
 import Slider from 'react-slick';
 
-export class SobreContainer extends Component {
+export class CenterMode  extends Component {
   render() {
     const settings = {
+      customPaging: function() {
+        return (
+          <a>
+            <img src={aboutPhoto} />
+          </a>
+        );
+      },
       dots: true,
+      dotsClass: "slick-dots slick-thumb",
+      fade: true,
       infinite: true,
-      speed: 500,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1
     };
     return (
-    <Sobre className='container'>
+    <Sobre className='container mb-5 pt-4'>
       <div className='row'>
-        <div className='texto col-12 col-md-6'>
+        <div className='texto col-12 col-md-6 mb-sm-4'>
           <h6>Móveis de Forma Artesanal</h6>
           <p>Móveis de Forma Artesanal em SP, com criatividade, emoção e personalidade, o resultado só pode ser deslumbrante.</p>
           <p>É com essa inspiração que são desenvolvidos os projetos da Marcenart, aliando a exclusividade do processo artesanal com o que há de mais moderno em tecnologia. Cada design deve retratar o estilo de vida, a otimização do espaço, a funcionalidade e a beleza, de uma forma exclusiva e encantadora.</p>
@@ -26,10 +37,10 @@ export class SobreContainer extends Component {
           <div className="h-100 opa">
             <Slider {...settings}>
               <div>
-                <img src={aboutPhoto} alt="" />
+                <img className='imgCarousel' src={aboutPhoto} alt="" />
               </div>
               <div>
-                <img src={aboutPhoto} alt="" />
+                <img className='imgCarousel' src={aboutPhoto} alt="" />
               </div>
             </Slider>
           </div>
