@@ -11,6 +11,19 @@ export const CarouselBox = styled.div`
         width: 100%;
         height: 70dvh;
         object-fit: cover;
+        object-position: center center;
+    }
+    svg {
+        color: ${colors.white};
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 8px;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+        color: ${colors.white};
+        opacity: 70%;
+        background-color: rgba(0, 0, 0, 0.7);
     }
     .slick-prev {
         left: 0;
@@ -29,7 +42,11 @@ export const CarouselBox = styled.div`
     .slick-prev:before, .slick-next:before {
         font-size: 30px;
         color: rgba(255, 255, 255, 0.9);
-    }
+        display: inline-block;
+        padding-right: 3px;
+        vertical-align: middle;
+        font-weight: 900;
+        }
     .slick-dots {
         bottom: 0;
         margin-bottom: 10px;
@@ -75,6 +92,9 @@ export const CarouselBox = styled.div`
         padding: 5px 20px;
         font-size: 2.5rem;
         color: ${colors.white};
+        @media ${device.tablet} {
+            font-size: 3rem;
+        }
     }
     .fadeInRightText {
         display: flex;
@@ -82,6 +102,9 @@ export const CarouselBox = styled.div`
         color: ${colors.white};
         font-weight: 400;   
         font-size: 1rem;    
+        @media ${device.tablet} {
+            font-size: 1.5rem;
+        }
     }
     .column {
         padding: 5px 0px;
@@ -96,8 +119,15 @@ export const CarouselBox = styled.div`
         font-weight: 300;
         margin: 0 auto 20px;
         border-radius: 15px 15px 15px 0;
+        @media ${device.tablet} {
+            font-size: 4.5rem;
+        }
     }
     @media (max-width: 595px) {
+        .slick-arrow {
+            height: 20px;
+            width: 20px;
+        }
         .fadeInBottomText {
             font-size: 2rem;
         }
@@ -107,6 +137,13 @@ export const CarouselBox = styled.div`
         }
     }
     @media (max-width: 377px) {
+        .slick-arrow {
+            height: 15px;
+            width: 15px;
+        }
+        svg {
+            padding: 5px;
+        }
         .fadeInBottomText {
             font-size: 1.5rem;
         }

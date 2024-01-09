@@ -119,9 +119,22 @@ export const BottomHero = styled.div`
     background-color: ${colors.orangePrincipal};
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10dvh;
+    padding: 10px 3rem;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        div {
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+
     color: ${colors.black};
     h4 {
         font-family: 'Oswald', 'Roboto', sans-serif;
@@ -129,6 +142,22 @@ export const BottomHero = styled.div`
         font-weight: 500;
         margin: 0;
         font-size: 1.8rem;
+    }
+    .card {
+        background-color: ${colors.white};
+        padding: 40px 20px;
+        border-radius: 20px;
+        text-align: start;
+        height: 100%;
+        h5 {
+            color: ${colors.black};
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        p {
+            color: ${colors.black};
+            font-size: 1.2rem;
+        }
     }
 `
 export const Ambientes = styled.div`

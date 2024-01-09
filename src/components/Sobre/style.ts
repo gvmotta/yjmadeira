@@ -11,6 +11,12 @@ export const Sobre = styled.div`
         @media ${device.tablet} {
             margin-bottom: 0;
         }
+        h4 {
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            color: ${colors.brown};
+        }
         h6 {
             font-family: 'Open Sans', 'Roboto', sans-serif;
             font-size: 20px;

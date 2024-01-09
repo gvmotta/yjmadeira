@@ -5,14 +5,18 @@ import HeaderBox from './components/Header';
 import { Ambientes, BottomHero } from './styles';
 import { CenterMode  } from './components/Sobre';
 import { Card } from './components/Card';
-import img from './assets/img/carousel/1.jpg'
+import img from './assets/img/carousel/1-copy.jpg'
+import telhadoImg from './assets/img/carousel/2-copy.jpeg'
 import deck from './assets/img/card-background.jpg';
 
 function App() {
   const slides = [
     { img: img, textsFadeInLeft: 'Pergolados', textsFadeInRightTop: 'Alto padrão', textsFadeInRightBottom: 'Sofisticação', textsFadeInBottom: 'Arte em madeira', textButton: 'Conheça' },
-    { img: img, textsFadeInLeft: 'Pergolados', textsFadeInRightTop: 'Alto padrão', textsFadeInRightBottom: 'Sofisticação', textsFadeInBottom: 'Arte em madeira', textButton: 'Conheça' }
-    
+    { img: telhadoImg, textsFadeInLeft: 'Telhados', textsFadeInRightTop: 'Qualidade', textsFadeInRightBottom: 'Perfeição', textsFadeInBottom: 'Arte em madeira', textButton: 'Conheça' }
+  ]
+  const slides2 = [
+    { img: img },
+    { img: telhadoImg }
   ]
   return (
     <>
@@ -22,8 +26,42 @@ function App() {
         <BottomHero>
           <h4>Móveis de forma artesanal</h4>
         </BottomHero>
-        <CenterMode  />
-        <div className="ambientesContainer">
+        <CenterMode slides={slides} />
+        <BottomHero>
+          <h3 className='text-white d-block'>Por que somos o serviço ideal para você?</h3>
+          <div className="row CardContainer">
+            <div className="col-5 card-style mb-4">
+              <div className="card">
+                <h5>Personalização:</h5>
+                <p>Os móveis planejados são feitos sob medida, o que significa que são criados para atender às necessidades específicas de cada cliente, personalizando cada projeto de acordo com suas preferências e necessidades.</p>
+              </div>
+            </div>
+            <div className="col-5 card-style mb-4">
+              <div className="card">
+                <h5>Valorização do imóvel:</h5>
+                <p>Investir em móveis planejados de alta qualidade pode valorizar o imóvel a longo prazo, o que pode ser um incentivo para quem está pensando em vender ou alugar sua propriedade no futuro.</p>
+              </div> 
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-5 card-style mb-4">
+              <div className="card">
+                <h5>Qualidade:</h5>
+                <p>Os móveis planejados são feitos com materiais de alta qualidade e são projetados para durar por muitos anos, o que significa que, a longo prazo, eles podem ser mais econômicos do que os móveis prontos.</p>
+              </div>
+            </div>
+            <div className="col-5 card-style mb-4">
+              <div className="card">
+                <h5>Design exclusivo:</h5>
+                <p>Os móveis planejados oferecem um design exclusivo e personalizado que não pode ser encontrado em móveis prontos, o que pode ser um grande atrativo para aqueles que buscam um estilo de decoração único.</p>
+              </div>
+            </div>
+          </div>
+        </BottomHero>
+        <BottomHero>
+          <h4>Alguns Projetos</h4>
+        </BottomHero>
+        <div className="ambientesContainer mt-3">
           <div className="container">
             <div className="texto">
               <h4>Marcenaria em Jundiaí e região</h4>
@@ -53,6 +91,7 @@ function App() {
             </Ambientes>
           </div>
         </div>
+        
       </main>
     </>
   );

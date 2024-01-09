@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SimpleSliderProps, SimpleSliderState } from './types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 export class SimpleSlider extends Component<SimpleSliderProps, SimpleSliderState> {
   state = {
@@ -20,7 +22,9 @@ export class SimpleSlider extends Component<SimpleSliderProps, SimpleSliderState
       slidesToShow: 1,
       slidesToScroll: 1, 
       beforeChange: (current: number, next: number) => this.setState({ activeSlide: next }),
-      afterChange: (current: number) => this.setState({ activeSlide: current })
+      afterChange: (current: number) => this.setState({ activeSlide: current }),
+      nextArrow: <FontAwesomeIcon icon={faChevronRight} />,
+      prevArrow: <FontAwesomeIcon icon={faChevronLeft} />
     };  
   return (
     <CarouselBox>
@@ -29,6 +33,8 @@ export class SimpleSlider extends Component<SimpleSliderProps, SimpleSliderState
             <div key={index}>
             {index === this.state.activeSlide && (
               <>
+              <button type="button" data-role="none" className="slick-arrow slick-next" > Opa</button>
+              <button type="button" data-role="none" className="slick-arrow slick-prev" > Opa</button>
               <div className="text-container">
                   <div className="d-flex justify-content-center mb-3">
                     <h4 className="fadeInLeft fadeInLeftText">{slide.textsFadeInLeft}</h4>
