@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import { device } from './assets/sizes';
 
 export const colors = {
     whatsapp: '#4CC85A',
@@ -121,7 +122,7 @@ export const BottomHero = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 3rem;
+    padding: 10px 1rem;
     height: 8dvh;
     color: ${colors.black};
     background-color: ${colors.orangePrincipal};
@@ -131,7 +132,10 @@ export const BottomHero = styled.div`
         font-style: italic;
         font-weight: 500;
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        @media ${device.mobileL} {
+            font-size: 1.8rem
+        }
     }
 `
 
