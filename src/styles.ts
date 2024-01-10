@@ -122,6 +122,7 @@ export const BottomHero = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px 3rem;
+    height: 8dvh;
     color: ${colors.black};
     background-color: ${colors.orangePrincipal};
 
@@ -140,7 +141,7 @@ export const CardContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 3rem;
+    padding: 10px 1rem;
     font-family: 'Open Sans', 'Roboto', sans-serif;
     color: ${colors.black};
 

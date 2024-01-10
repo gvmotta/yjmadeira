@@ -8,12 +8,15 @@ export const Header = styled.header`
         justify-content: space-around;
         flex-direction: column;
         padding: 5px 0;
-        font-size: 12px;
-        font-weight: 600;
         color: ${colors.white};
         height: 8dvh;
         p {
             margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            @media ${device.mobileL} {
+                font-size: 16px;
+            }
         }
 
         .contact {
@@ -25,6 +28,9 @@ export const Header = styled.header`
         .icon {
             font-size: 1.3rem;
             margin-right: 6px;
+            @media ${device.mobileL} {
+                font-size: 1.5rem;
+            }
         }
 
         .whatsapp {
@@ -37,6 +43,10 @@ export const Header = styled.header`
         @media ${device.mobileL} {
             flex-direction: row;
             height: 5dvh;
+        }
+        @media ${device.tablet} {
+            flex-direction: row;
+            height: 6dvh;
         }
     }
 
@@ -57,6 +67,9 @@ export const Header = styled.header`
         nav {
             padding: 0.2rem 0;
             display: flex;
+            @media ${device.tablet} {
+                height: 13dvh;
+            }
             ul {
                 display: flex;
                 justify-content: center;

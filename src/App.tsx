@@ -19,6 +19,7 @@ function App() {
     { img: img },
     { img: telhadoImg }
   ]
+  
   return (
     <>
       <HeaderBox />

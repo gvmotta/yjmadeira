@@ -5,11 +5,11 @@ import { ICarouselStyled } from "./types";
 
 export const CarouselBox = styled.div`
     width: 100%;
-    height: 70dvh;
+    height: 73dvh;
     position: relative;
     img {
         width: 100%;
-        height: 70dvh;
+        height: 73dvh;
         object-fit: cover;
         object-position: center center;
     }

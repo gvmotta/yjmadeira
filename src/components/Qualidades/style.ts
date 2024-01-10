@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Qualidade = styled.div`
     img {
         width: 100%;
-        height: auto;
+        height: 150px;
+        object-fit: cover;
     }
     .slick-next:before {
         content: '';
