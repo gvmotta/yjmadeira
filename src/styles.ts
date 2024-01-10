@@ -116,7 +116,25 @@ export const GlobalStyled = createGlobalStyle`
 `
 
 export const BottomHero = styled.div`
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 3rem;
+    color: ${colors.black};
     background-color: ${colors.orangePrincipal};
+
+    h4 {
+        font-family: 'Oswald', 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: 500;
+        margin: 0;
+        font-size: 1.8rem;
+    }
+`
+
+export const CardContainer = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -124,6 +142,7 @@ export const BottomHero = styled.div`
     align-items: center;
     padding: 10px 3rem;
     font-family: 'Open Sans', 'Roboto', sans-serif;
+    color: ${colors.black};
 
     .row {
         display: flex;
@@ -134,32 +153,52 @@ export const BottomHero = styled.div`
             flex-grow: 1;
         }
     }
-
-    color: ${colors.black};
-    h4 {
-        font-family: 'Oswald', 'Roboto', sans-serif;
-        font-style: italic;
-        font-weight: 500;
-        margin: 0;
-        font-size: 1.8rem;
-    }
     .card {
-        background-color: ${colors.white};
+        background-color: #FAFAFA;
         padding: 40px 20px;
         border-radius: 20px;
         text-align: start;
         height: 100%;
+        border: none;
+        max-width: 350px;
+        margin: 0 20px 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         h5 {
-            color: ${colors.black};
+            color: ${colors.orangePrincipal};
             font-weight: bold;
             font-size: 1.5rem;
         }
         p {
             color: ${colors.black};
             font-size: 1.2rem;
+            margin-bottom: 0;
         }
     }
+    h3 {
+        color: ${colors.orangePrincipal};
+    }
 `
+
 export const Ambientes = styled.div`
     
+`
+
+export const Qualidades = styled.div`
+    background-color: ${colors.orangePrincipal};
+    color: ${colors.white};
+    text-align: center;
+    font-size: 1.1rem;
+    .row {
+        padding: 50px 30px 20px;
+        --bs-gutter-x: 0;
+    }
+    hr {
+        color: ${colors.white};
+        opacity: 0.5;
+        max-width: 400px;
+        margin: 1rem auto;
+    }
+    p {
+        padding: 0 1rem;
+    }
 `
