@@ -1,12 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { device } from './assets/sizes';
+import backgroundProjects from './assets/img/background-projects.jpg'
+import { IHrStyled, ITitleSectionStyled } from './types';
 
 export const colors = {
     whatsapp: '#4CC85A',
     white: '#fff',
     black: '#000',
     orangePrincipal: '#E77112', 
+    orangeDarker: '#e26c12',
+    orangeLighter: '#e59354',
     orangePrincipalOpacity: 'rgba(231, 113, 18, .8)', 
     brown: '#8D5200',
     brownSecundary: '#B98746'
@@ -128,13 +132,13 @@ export const BottomHero = styled.div`
     background-color: ${colors.orangePrincipal};
 
     h4 {
-        font-family: 'Oswald', 'Roboto', sans-serif;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
         font-style: italic;
-        font-weight: 500;
+        font-weight: 700;
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         @media ${device.mobileL} {
-            font-size: 1.8rem
+            font-size: 1.7rem
         }
     }
 `
@@ -170,7 +174,7 @@ export const CardContainer = styled.div`
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         h5 {
             color: ${colors.orangePrincipal};
-            font-weight: bold;
+            font-weight: 400;
             font-size: 1.5rem;
         }
         p {
@@ -181,12 +185,60 @@ export const CardContainer = styled.div`
     }
     h3 {
         color: ${colors.orangePrincipal};
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+        font-weight: 600;
     }
 `
 
-export const Ambientes = styled.div`
-    
+export const TitleSection = styled.h4<ITitleSectionStyled>`
+    font-family: 'Montserrat', 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: ${colors.orangePrincipal};
+    margin-right: 1rem;
+
+    ${({variant}) => variant == 'white' && css`
+        color: ${colors.white};
+    `}
 `
+
+export const Linha = styled.hr<IHrStyled>`
+    margin: 0 10%;
+    opacity: 0.8;
+    border: 2px solid ${colors.white};
+    ${({variant}) => variant == 'orangePrincipal' && css`
+        border: 2px solid ${colors.orangePrincipal};
+    `}
+`
+
+export const Ambientes = styled.div`
+    margin-top: 6rem;
+    background-color: #F6F6F6;
+    .texto {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .light {
+            color: ${colors.orangeLighter};
+        }
+        hr {
+            border: 2px solid ${colors.orangePrincipal};
+            opacity: .75;
+            width: 80%;
+            @media ${device.tablet} {
+                width: 60%;
+                min-width: 500px;
+            }
+        }
+    }
+`
+
+
 
 export const Qualidades = styled.div`
     background-color: ${colors.orangePrincipal};

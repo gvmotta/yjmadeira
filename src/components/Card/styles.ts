@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
 }
 img {
     height: auto;
-    max-height: 200px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
   }
@@ -21,12 +21,20 @@ img {
     }
     cursor: pointer;
 
-    h5 {
+    .content {
       display: block;
       animation: slide-down 0.5s ease-in-out;
       pointer-events: none;
       color: ${colors.white};
-      top: calc(50% - 0.625rem);
+      top: calc(50% - 24px);
+
+      svg {
+        background-color: ${colors.white};
+        color: ${colors.black};
+        padding: 7px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
     }
 }
 
@@ -41,7 +49,7 @@ img {
     }
 }
 
-h5 {
+.content {
     height: 100%;
     width: 100%;
     display: none;

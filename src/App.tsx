@@ -2,13 +2,20 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SimpleSlider } from './components/Carousel';
 import HeaderBox from './components/Header';
-import { Ambientes, BottomHero, CardContainer, Qualidades } from './styles';
+import { Ambientes, BottomHero, CardContainer, Qualidades, TitleSection } from './styles';
 import { CenterMode  } from './components/Sobre';
 import { Card } from './components/Card';
 import img from './assets/img/carousel/1-copy.jpg'
 import telhadoImg from './assets/img/carousel/2-copy.jpeg'
-import deck from './assets/img/card-background.jpg';
+import telhadoImg2 from './assets/img/carousel-bottom/16.png';
+import deckImg from './assets/img/deck.jpg';
+import parquinhoImg from './assets/img/carousel-bottom/2.png';
+import painelImg from './assets/img/carousel-bottom/11.png';
+import escadaImg from './assets/img/carousel-bottom/15.png';
 import Responsive from './components/Qualidades';
+import { Contact } from './components/Contact';
+import { AvaliacoesContainer } from './components/Avalicoes/styles';
+import { Avaliacoes } from './components/Avalicoes';
 
 function App() {
   const slides = [
@@ -83,39 +90,43 @@ function App() {
             </div>
           </div>
         </CardContainer>
-        <BottomHero>
-          <h4>Alguns Projetos</h4>
-        </BottomHero>
-        <div className="ambientesContainer mt-3">
+        <Ambientes>
           <div className="container">
-            <div className="texto">
-              <h4>Marcenaria em Jundiaí e região</h4>
-              <p>Projetamos móveis planejados para os mais variados segmentos, de sua residência a sua empresa, serviço feito com respeito, compromisso e foco na entrega de planejados de qualidade, acompanhe no nosso portfólio alguns projetos desenvolvidos ao longo de nossa jornada. Bem-vindo!</p>
-            </div>
-            <Ambientes>
-              <div className="row mb-4">
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Pergolados" src={img}/>
+            <div className='content'>
+              <div className="texto">
+                <div className="d-flex">
+                  <TitleSection>Nossos Projetos</TitleSection>
+                  <h4 className='light mb-0'></h4>
                 </div>
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Decks" src={deck}/>
-                </div>
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Quartos" src={img}/>
-                </div>
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Outros" src={img} />
-                </div>
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Outros" src={img} />
-                </div>
-                <div className="col-sm-6 col-md-4 mb-3">
-                  <Card title="Outros" src={img} />
+                <hr />
+              </div>
+              <div>
+                <div className="row">
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Pergolados" src={img}/>
+                  </div>
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Decks" src={deckImg}/>
+                  </div>
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Telhados" src={telhadoImg2}/>
+                  </div>
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Parquinhos" src={parquinhoImg} />
+                  </div>
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Painéis" src={painelImg} />
+                  </div>
+                  <div className="col-sm-6 col-md-4 mb-3">
+                    <Card title="Guarda-corpo" src={escadaImg} />
+                  </div>
                 </div>
               </div>
-            </Ambientes>
+             </div>
           </div>
-        </div>
+        </Ambientes>
+        <Avaliacoes />
+        <Contact />
         
       </main>
     </>
