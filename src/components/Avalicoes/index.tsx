@@ -10,10 +10,9 @@ export class Avaliacoes extends Component<ISlideProps> {
     avaliacoes = [];
     render() {
         var settings = {
-          dots: true,
           infinite: true,
           speed: 500,
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 0,
           responsive: [
@@ -22,12 +21,11 @@ export class Avaliacoes extends Component<ISlideProps> {
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                infinite: true,
-                dots: true
+                infinite: true
               }
             },
             {
-              breakpoint: 600,
+              breakpoint: 768,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -35,7 +33,7 @@ export class Avaliacoes extends Component<ISlideProps> {
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 600,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -50,18 +48,20 @@ export class Avaliacoes extends Component<ISlideProps> {
             <TitleSection variant='white'>Avalições de nossos clientes</TitleSection>
             <Linha />
         </div>
-        <div className="slider container">
+        <div className="slider">
             <Slider {...settings}>
               {this.props.avaliacoes.map((avaliacoes, index) => (
-                  <div className="cardContainer">
-                      <p>{avaliacoes.texto}</p>
-                      <div className="person">
-                          <img src={avaliacoes.img} alt="" />
-                          <div className="text">
-                            <p>{avaliacoes.name}</p>
-                            <p>{avaliacoes.city}</p>
-                          </div>
-                      </div>
+                  <div>
+                    <div className="cardContainer">
+                        <p>{avaliacoes.texto}</p>
+                        <div className="person">
+                            <img src={avaliacoes.img} alt="" />
+                            <div className="text">
+                              <p>{avaliacoes.name}</p>
+                              <p>{avaliacoes.city}</p>
+                            </div>
+                        </div>
+                    </div>
                   </div>
               ))}
             </Slider>

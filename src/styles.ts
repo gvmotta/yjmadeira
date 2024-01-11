@@ -217,6 +217,7 @@ export const Linha = styled.hr<IHrStyled>`
 
 export const Ambientes = styled.div`
     margin-top: 6rem;
+    padding-bottom: 4rem;
     background-color: #F6F6F6;
     .texto {
         display: flex;
