@@ -1,32 +1,72 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { AvaliacoesContainer } from './styles'
-import { Linha, TitleSection } from '../../styles'
+import { Linha, TitleSection } from '../../styles';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { ISlide, ISlideProps } from './types';
 
-export const Avaliacoes = () => {
+export class Avaliacoes extends Component<ISlideProps> {
+    avaliacoes = [];
+    render() {
+        var settings = {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          initialSlide: 0,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        };
+    ;
   return (
     <AvaliacoesContainer>
-        <TitleSection variant='white'>Avalições de nossos clientes</TitleSection>
-        <Linha />
-        <div className="row">
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>                
-            </div>
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4">
-                <p>Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado</p>
-            </div>
+        <div className="texto">
+            <TitleSection variant='white'>Avalições de nossos clientes</TitleSection>
+            <Linha />
+        </div>
+        <div className="slider container">
+            <Slider {...settings}>
+              {this.props.avaliacoes.map((avaliacoes, index) => (
+                  <div className="cardContainer">
+                      <p>{avaliacoes.texto}</p>
+                      <div className="person">
+                          <img src={avaliacoes.img} alt="" />
+                          <div className="text">
+                            <p>{avaliacoes.name}</p>
+                            <p>{avaliacoes.city}</p>
+                          </div>
+                      </div>
+                  </div>
+              ))}
+            </Slider>
         </div>
     </AvaliacoesContainer>
   )
+}
 }

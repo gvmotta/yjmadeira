@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SimpleSlider } from './components/Carousel';
 import HeaderBox from './components/Header';
-import { Ambientes, BottomHero, CardContainer, Qualidades, TitleSection } from './styles';
+import { Ambientes, BottomHero, CardContainer, Linha, Qualidades, TitleSection } from './styles';
 import { CenterMode  } from './components/Sobre';
 import { Card } from './components/Card';
 import img from './assets/img/carousel/1-copy.jpg'
@@ -26,7 +26,15 @@ function App() {
     { img: img },
     { img: telhadoImg }
   ]
-  
+  const avaliacoes = [
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' },
+    { img: escadaImg, texto: 'Recomendo totalmente, desde o contato inicial até o design do projeto, ficou com a nossa cara. A qualidade dos móveis, clareza e rapidez nas informações foram fundamentais para que todo o projeto obtivesse minha satisfação total. Estou planejando o próximo projeto e com certeza será com vocês. Meu muito obrigado', name: 'Aloíizo', city: 'Itupeva' }
+  ]
   return (
     <>
       <HeaderBox />
@@ -35,7 +43,7 @@ function App() {
         <BottomHero>
           <h4>Móveis de forma artesanal</h4>
         </BottomHero>
-        <CenterMode slides={slides} />
+        <CenterMode slides={slides2} />
         <Qualidades>
           <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-3 mb-lg-5 mb-md-3 mb-sm-3 mb-3 d-block d-lg-flex align-items-lg-center justify-content-lg-center">
@@ -94,9 +102,9 @@ function App() {
           <div className="container">
             <div className='content'>
               <div className="texto">
-                <div className="d-flex">
+                <div className="w-100">
                   <TitleSection>Nossos Projetos</TitleSection>
-                  <h4 className='light mb-0'></h4>
+                  <Linha  variant='orangePrincipal' />
                 </div>
                 <hr />
               </div>
@@ -125,7 +133,7 @@ function App() {
              </div>
           </div>
         </Ambientes>
-        <Avaliacoes />
+        <Avaliacoes avaliacoes={avaliacoes}/>
         <Contact />
         
       </main>

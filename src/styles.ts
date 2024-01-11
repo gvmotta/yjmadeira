@@ -197,7 +197,8 @@ export const TitleSection = styled.h4<ITitleSectionStyled>`
     font-weight: 700;
     text-align: center;
     color: ${colors.orangePrincipal};
-    margin-right: 1rem;
+    padding-top: 6rem;
+    margin-bottom: 1rem;
 
     ${({variant}) => variant == 'white' && css`
         color: ${colors.white};
@@ -205,8 +206,9 @@ export const TitleSection = styled.h4<ITitleSectionStyled>`
 `
 
 export const Linha = styled.hr<IHrStyled>`
-    margin: 0 10%;
-    opacity: 0.8;
+    margin: 0 0 10% 0;
+    opacity: 1;
+    margin: 0 20%;
     border: 2px solid ${colors.white};
     ${({variant}) => variant == 'orangePrincipal' && css`
         border: 2px solid ${colors.orangePrincipal};
@@ -217,23 +219,12 @@ export const Ambientes = styled.div`
     margin-top: 6rem;
     background-color: #F6F6F6;
     .texto {
-        padding-top: 6rem;
-        padding-bottom: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .light {
             color: ${colors.orangeLighter};
-        }
-        hr {
-            border: 2px solid ${colors.orangePrincipal};
-            opacity: .75;
-            width: 80%;
-            @media ${device.tablet} {
-                width: 60%;
-                min-width: 500px;
-            }
         }
     }
 `

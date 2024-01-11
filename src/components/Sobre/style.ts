@@ -48,9 +48,11 @@ export const Sobre = styled.div`
             margin-bottom: 3rem;
         }
         @media ${device.tablet} {
-            padding-top: 4rem;
+            padding-top: 13rem;
         }
-        
+        @media (min-width: 992px) {
+            padding-top: 6rem;
+        }
         button::before {
             color: ${colors.black};
         }
