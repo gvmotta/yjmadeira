@@ -4,18 +4,28 @@ import Logo from '../../assets/img/logo_header.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { emailLink, linkWhatsapp } from '../../assets/sizes';
+import { Link } from '../../styles';
 
 export default function HeaderBox() {
   return (
     <Header>
         <div className='upper'>
             <div className="contact">
-                <FontAwesomeIcon icon={faWhatsapp} className='whatsapp icon'/>
-                <p>(11) 94027-5238</p>
+                <Link>
+                    <a className='nav-item' href={linkWhatsapp}>
+                        <FontAwesomeIcon icon={faWhatsapp} className='whatsapp icon'/>
+                        <p>(11) 94027-5238</p>
+                    </a>
+                </Link>
             </div>
             <div className="contact">
-                <FontAwesomeIcon icon={faEnvelope} className='icon'/>
-                <p>contato@yjmadeira.com.br</p>
+                <Link>
+                    <a href={emailLink} className="nav-item">
+                        <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+                        <p>contato@yjmadeira.com.br</p>
+                    </a>
+                </Link>
             </div>
         </div>
         <div className='bottom'>
@@ -30,13 +40,18 @@ export default function HeaderBox() {
                     <div className="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo01">
                         <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                             <li className='nav-item text-center text-md-end'>
-                                <a className='nav-link' href="#">Início</a>
+                                <Link>
+                                    <a className='nav-link' href="#">Início</a>
+                                </Link>
                             </li>
                             <li className='nav-item text-center text-md-end'>
-                                <a className='nav-link' href="#">Sobre</a>
+                                <Link><a className='nav-link' href="#">Sobre</a></Link>
                             </li>
                             <li className='nav-item text-center text-md-end'>
-                                <a className='nav-link' href="#">Produtos</a>
+                                <Link><a className='nav-link' href="#">Projetos</a></Link>
+                            </li>
+                            <li className='nav-item text-center text-md-end'>
+                                <Link><a className='nav-link' href="#">Contato</a></Link>
                             </li>
                         </ul>
                     </div>

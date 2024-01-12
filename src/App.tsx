@@ -16,6 +16,7 @@ import Responsive from './components/Qualidades';
 import { Contact } from './components/Contact';
 import { AvaliacoesContainer } from './components/Avalicoes/styles';
 import { Avaliacoes } from './components/Avalicoes';
+import { Footer } from './components/Footer';
 
 function App() {
   const slides = [
@@ -135,6 +136,7 @@ function App() {
         </Ambientes>
         <Avaliacoes avaliacoes={avaliacoes}/>
         <Contact />
+        <Footer />
         
       </main>
     </>

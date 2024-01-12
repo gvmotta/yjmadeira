@@ -18,16 +18,23 @@ export const Header = styled.header`
                 font-size: 16px;
             }
         }
-
         .contact {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+            a {
+                color: ${colors.white};
+                display: flex;
+            }
+            p {
+            }
 
+        }
+        
         .icon {
             font-size: 1.3rem;
             margin-right: 6px;
+            color: ${colors.white};
             @media ${device.mobileL} {
                 font-size: 1.5rem;
             }

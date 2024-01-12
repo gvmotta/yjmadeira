@@ -5,7 +5,7 @@ import backgroundProjects from './assets/img/background-projects.jpg'
 import { IHrStyled, ITitleSectionStyled } from './types';
 
 export const colors = {
-    whatsapp: '#4CC85A',
+    whatsapp: '#62ea70',
     white: '#fff',
     black: '#000',
     orangePrincipal: '#E77112', 
@@ -15,6 +15,15 @@ export const colors = {
     brown: '#8D5200',
     brownSecundary: '#B98746'
 }
+
+export const Link = styled.div`
+    a {
+        text-decoration: none;
+    } 
+    a:hover {
+        text-decoration: underline!important;
+    }
+`
 
 export const GlobalStyled = createGlobalStyle`
     * {

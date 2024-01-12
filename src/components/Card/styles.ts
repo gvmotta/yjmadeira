@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styles";
+import { device } from "../../assets/sizes";
 
 export const CardContainer = styled.div`
   box-shadow: 0px 0px 40px 25px rgba(0, 0, 0, 0.1);
@@ -13,20 +14,18 @@ img {
     width: 100%;
     object-fit: cover;
   }
-
-  :hover {
+  @media (max-width: 767px) {
+    cursor: pointer;
     img {
       filter: brightness(50%);
       transition: filter 0.5s ease-in-out;
     }
-    cursor: pointer;
-
     .content {
-      display: block;
+      display: block!important;
       animation: slide-down 0.5s ease-in-out;
       pointer-events: none;
       color: ${colors.white};
-      top: calc(50% - 24px);
+      top: calc(50% - 24px)!important;
 
       svg {
         background-color: ${colors.white};
@@ -36,7 +35,32 @@ img {
         cursor: pointer;
       }
     }
-}
+  }
+  @media ${device.tablet} {
+    :hover {
+      img {
+        filter: brightness(50%);
+        transition: filter 0.5s ease-in-out;
+      }
+      cursor: pointer;
+  
+      .content {
+        display: block;
+        animation: slide-down 0.5s ease-in-out;
+        pointer-events: none;
+        color: ${colors.white};
+        top: calc(50% - 24px);
+  
+        svg {
+          background-color: ${colors.white};
+          color: ${colors.black};
+          padding: 7px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 
 @keyframes slide-down {
     from {

@@ -18,17 +18,67 @@ export const FormContainer = styled.div`
         h3 {
             font-weight: 400;
             font-family: 'Montserrat', 'Open Sans', sans-serif;
-            margin-bottom: .75rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
             span {
                 font-weight: 600;
+            }
+        }
+        h6 {
+            a:hover {
+                text-decoration: underline;
             }
         }
         a {
             text-decoration: none;
             color: ${colors.orangePrincipal};
         }
+        a.link {
+            color: ${colors.black};
+        }
+        .whatsapp svg {
+            color: ${colors.whatsapp};
+        }
+        .contact-header {
+            margin-bottom: .5rem;
+            .svg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                svg {
+                    font-size: 2rem;
+                }
+            }
+            h4 {
+                margin-left: 1rem;
+                font-size: 2rem;
+                font-weight: 300;
+                margin-bottom: 0;
+                padding-top: 4px;
+            }
+        }
+
+        .contact {
+            margin-bottom: 1rem;
+            .svg {
+                width: 1.5rem;
+                display: flex;
+                justify-content: center;
+                svg {
+                    font-size: 1.5rem;
+                }
+            }
+            p {
+                margin-left: 1rem;
+                margin-bottom: 0;
+            }
+        }
+        
     }
     form {
+        width: 100%;
         label {
             color: ${colors.white};
         }
@@ -36,7 +86,6 @@ export const FormContainer = styled.div`
             display: block;
         }
         input, textarea {
-            min-width: 500px;
             background-color: rgba(255, 255, 255, 0.7);   
             padding: 10px 15px;    
         }

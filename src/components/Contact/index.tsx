@@ -4,10 +4,11 @@ import { IForm } from './types';
 import { useForm, SubmitHandler } from "react-hook-form";
 import * as yup from "yup"; 
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Linha, TitleSection } from '../../styles';
+import { Linha, Link, TitleSection } from '../../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faIdCard, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { calltoLink, emailLink, linkWhatsapp } from '../../assets/sizes';
 
 const phoneRegExp = /^(\([0-9]{2}\))\s(9?[0-9]{4})-(\d{4})$/;
 
@@ -41,52 +42,78 @@ export const Contact = () => {
 
   return (
     <FormContainer>
-        <TitleSection>Entre em contato com a gente</TitleSection>
-        <Linha variant='orangePrincipal'/>
-        <div className="row m-0 mt-5 pb-5">
+        <div className="text px-4">
+            <TitleSection>Entre em contato com a gente</TitleSection>
+            <Linha variant='orangePrincipal'/>
+        </div>
+        <div className="row m-0 mt-5 pb-5 container m-auto">
             <div className="col-12 col-sm-12 col-md-6">
-                <div className="background container">
+                <div className="background">
                     <p>Solicite a visita de um de nossos colaboradores</p>
                     <h3>Atendimento <span>especializado</span></h3>
-                    <p>Enviamos a você um especialista de confiança para analisar os ambientes, tirar todas as medidas necessárias, sanar as dúvidas e entregar um orçamento compatível com suas necessidades.</p>
-                    <h6>Caso tenha a planta do local, pode nos enviar <a href="#">clicando aqui.</a></h6>
-                    <div className="contact d-flex">
-                        <FontAwesomeIcon icon={faWhatsapp} />
-                        <p>(11) 94027-5238</p>
+                    <p className='pb-2'>Enviamos a você um especialista de confiança para analisar os ambientes, tirar todas as medidas necessárias, sanar as dúvidas e entregar um orçamento compatível com suas necessidades.</p>
+                    <h6 className='pb-2'>Caso tenha a planta do local, pode nos enviar <a href="#">clicando aqui.</a></h6>
+                    <div className="d-flex contact-header">
+                        <div className="svg">
+                            <FontAwesomeIcon icon={faIdCard} />
+                        </div>
+                        <h4>Contato</h4>
                     </div>
-                    <div className="contact d-flex">
-                        <FontAwesomeIcon icon={faPhone} />
-                        <p>(11) 94027-5238</p>
-                    </div>     
-                    <div className="contact d-flex">
-                        <FontAwesomeIcon icon={faEnvelope} />
-                        <p>contato@yjmadeira.com.br</p>
-                    </div>
+                    <Link>
+                        <a className='link' href={linkWhatsapp}>
+                            <div className="contact d-flex">
+                                <div className="whatsapp svg">
+                                    <FontAwesomeIcon icon={faWhatsapp} />
+                                </div>
+                                <p>(11) 94027-5238</p>
+                            </div>
+                        </a>
+                    </Link>
+                    <Link>
+                        <a href={calltoLink} className="link">
+                            <div className="contact d-flex">
+                                <div className="svg">
+                                    <FontAwesomeIcon icon={faPhone} />
+                                </div>
+                                <p>(11) 94027-5238</p>
+                            </div>
+                        </a>
+                    </Link>   
+                    <Link>
+                        <a href={emailLink} className="link">
+                            <div className="contact d-flex">
+                                <div className="svg">
+                                    <FontAwesomeIcon icon={faEnvelope} />
+                                </div>
+                                <p>contato@yjmadeira.com.br</p>
+                            </div>
+                        </a>
+                    </Link>
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-6 d-flex justify-content-center">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="col-12 my-3">
                         <label>Nome:</label>
-                        <input {...register("nome")} placeholder='Nome'/>
+                        <input className='form-control' {...register("nome")} placeholder='Nome'/>
                         <span>{errors.nome?.message}</span>
                     </div>
 
                     <div className="col-12 my-2">
                         <label>E-mail:</label>
-                        <input {...register("email")} placeholder='email@email.com'/>
+                        <input className='form-control' {...register("email")} placeholder='email@email.com'/>
                         <span>{errors.email?.message}</span>
                     </div>
 
                     <div className="col-12 my-2">
                         <label>Número de telefone:</label>
-                        <input {...register("cellphone")} value={phone} onChange={handleChange} placeholder='(xx)xxxxx-xxxx' />
+                        <input className='form-control' {...register("cellphone")} value={phone} onChange={handleChange} placeholder='(xx)xxxxx-xxxx' />
                         <span>{errors.cellphone?.message}</span>
                     </div>
 
                     <div className="col-12 my-2">
                         <label>Mensagem</label>
-                        <textarea {...register("mensagem")} placeholder='Gostaria de saber mais sobre...' />
+                        <textarea className='form-control' {...register("mensagem")} placeholder='Gostaria de saber mais sobre...' />
                         <span>{errors.mensagem?.message}</span>
                     </div>
 
