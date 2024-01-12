@@ -5,27 +5,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { emailLink, linkWhatsapp } from '../../assets/sizes';
-import { Link } from '../../styles';
+import { LinkBox } from '../../styles';
+import { Link } from "react-router-dom";
 
 export default function HeaderBox() {
   return (
     <Header>
         <div className='upper'>
             <div className="contact">
-                <Link>
+                <LinkBox>
                     <a className='nav-item' href={linkWhatsapp}>
                         <FontAwesomeIcon icon={faWhatsapp} className='whatsapp icon'/>
                         <p>(11) 94027-5238</p>
                     </a>
-                </Link>
+                </LinkBox>
             </div>
             <div className="contact">
-                <Link>
+                <LinkBox>
                     <a href={emailLink} className="nav-item">
                         <FontAwesomeIcon icon={faEnvelope} className='icon'/>
                         <p>contato@yjmadeira.com.br</p>
                     </a>
-                </Link>
+                </LinkBox>
             </div>
         </div>
         <div className='bottom'>
@@ -40,18 +41,24 @@ export default function HeaderBox() {
                     <div className="collapse navbar-collapse flex-grow-0" id="navbarTogglerDemo01">
                         <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                             <li className='nav-item text-center text-md-end'>
-                                <Link>
-                                    <a className='nav-link' href="#">Início</a>
-                                </Link>
+                                <LinkBox>
+                                    <Link to="/">
+                                        <a className='nav-link' href="#">Início</a>
+                                    </Link>
+                                </LinkBox>
                             </li>
                             <li className='nav-item text-center text-md-end'>
-                                <Link><a className='nav-link' href="#">Sobre</a></Link>
+                                <LinkBox>
+                                    <Link to="/sobre">
+                                        <a className='nav-link' href="#">Sobre</a>
+                                    </Link>
+                                </LinkBox>
                             </li>
                             <li className='nav-item text-center text-md-end'>
-                                <Link><a className='nav-link' href="#">Projetos</a></Link>
+                                <LinkBox><a className='nav-link' href="#">Projetos</a></LinkBox>
                             </li>
                             <li className='nav-item text-center text-md-end'>
-                                <Link><a className='nav-link' href="#">Contato</a></Link>
+                                <LinkBox><a className='nav-link' href="#">Contato</a></LinkBox>
                             </li>
                         </ul>
                     </div>

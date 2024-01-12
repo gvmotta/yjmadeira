@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { device } from './assets/sizes';
+import { device } from '../../assets/sizes';
 import backgroundProjects from './assets/img/background-projects.jpg'
 import { IHrStyled, ITitleSectionStyled } from './types';
 
@@ -16,7 +16,7 @@ export const colors = {
     brownSecundary: '#B98746'
 }
 
-export const LinkBox = styled.div`
+export const Link = styled.div`
     a {
         text-decoration: none;
     } 

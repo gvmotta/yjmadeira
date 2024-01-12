@@ -4,7 +4,7 @@ import Logo from '../../assets/img/logo_header.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { linkFacebook, linkInstagram, linkWhatsapp, telefone } from '../../assets/sizes';
-import { Link } from '../../styles';
+import { LinkBox } from '../../styles';
 
 export const Footer = () => {
   return (
@@ -21,21 +21,21 @@ export const Footer = () => {
                 <div className="col mb-3">
                     <h5>Nesta página</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Início</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Sobre</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Qualidades</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Projetos</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Avaliações</a></Link></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Início</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Sobre</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Qualidades</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Projetos</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Avaliações</a></LinkBox></li>
                     </ul>
                 </div>
 
                 <div className="col mb-3">
                     <h5>Mapa do site</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Página inicial</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Sobre</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Projetos</a></Link></li>
-                        <li className="nav-item mb-2"><Link><a href="#" className="nav-link p-0 text-body-secondary">Contato</a></Link></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Página inicial</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Sobre</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Projetos</a></LinkBox></li>
+                        <li className="nav-item mb-2"><LinkBox><a href="#" className="nav-link p-0 text-body-secondary">Contato</a></LinkBox></li>
                     </ul>
                 </div>
 
@@ -43,34 +43,34 @@ export const Footer = () => {
                     <h5>Redes Sociais</h5>
                     <ul className="nav flex-column redes">
                         <li className="nav-item mb-2">
-                            <Link>
+                            <LinkBox>
                                 <a href={linkWhatsapp} className="nav-link p-0 text-body-secondary">
                                 <div className="svg">
                                     <FontAwesomeIcon icon={faWhatsapp} />
                                 </div>
                                 <p>{telefone}</p>
                                 </a>
-                            </Link>
+                            </LinkBox>
                         </li>
                         <li className="nav-item mb-2">
-                            <Link>
+                            <LinkBox>
                                 <a href={linkInstagram}className="nav-link p-0 text-body-secondary">
                                 <div className="svg">
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </div>
                                 <p>@yj.madeira</p>
                                 </a>
-                            </Link>
+                            </LinkBox>
                         </li>
                         <li className="nav-item mb-2">
-                            <Link>
+                            <LinkBox>
                                 <a href={linkFacebook} className="nav-link p-0 text-body-secondary">
                                 <div className="svg">
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </div>
                                 <p>@yj.madeira</p>
                                 </a>
-                            </Link>
+                            </LinkBox>
                         </li>
                     </ul>
                 </div>

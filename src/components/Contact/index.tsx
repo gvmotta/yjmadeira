@@ -4,7 +4,7 @@ import { IForm } from './types';
 import { useForm, SubmitHandler } from "react-hook-form";
 import * as yup from "yup"; 
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Linha, Link, TitleSection } from '../../styles';
+import { Linha, LinkBox, TitleSection } from '../../styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faIdCard, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -59,7 +59,7 @@ export const Contact = () => {
                         </div>
                         <h4>Contato</h4>
                     </div>
-                    <Link>
+                    <LinkBox>
                         <a className='link' href={linkWhatsapp}>
                             <div className="contact d-flex">
                                 <div className="whatsapp svg">
@@ -68,8 +68,8 @@ export const Contact = () => {
                                 <p>(11) 94027-5238</p>
                             </div>
                         </a>
-                    </Link>
-                    <Link>
+                    </LinkBox>
+                    <LinkBox>
                         <a href={calltoLink} className="link">
                             <div className="contact d-flex">
                                 <div className="svg">
@@ -78,8 +78,8 @@ export const Contact = () => {
                                 <p>(11) 94027-5238</p>
                             </div>
                         </a>
-                    </Link>   
-                    <Link>
+                    </LinkBox>   
+                    <LinkBox>
                         <a href={emailLink} className="link">
                             <div className="contact d-flex">
                                 <div className="svg">
@@ -88,7 +88,7 @@ export const Contact = () => {
                                 <p>contato@yjmadeira.com.br</p>
                             </div>
                         </a>
-                    </Link>
+                    </LinkBox>
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-6 d-flex justify-content-center">
