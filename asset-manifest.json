@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yjmadeira/static/css/main.05fc5e08.css",
-    "main.js": "/yjmadeira/static/js/main.548e3d92.js",
+    "main.js": "/yjmadeira/static/js/main.7c120012.js",
     "static/media/deck.jpg": "/yjmadeira/static/media/deck.48a9b847a76fda232fef.jpg",
     "static/media/2-copy.jpeg": "/yjmadeira/static/media/2-copy.3fb0619e30fc38fabe38.jpeg",
     "static/media/1-copy.jpg": "/yjmadeira/static/media/1-copy.d31999b872a3f8a6fe65.jpg",
@@ -24,6 +24,7 @@
     "static/media/5.png": "/yjmadeira/static/media/5.ba4179cf4425a124732a.png",
     "static/media/14.png": "/yjmadeira/static/media/14.9c92c5165afadb700e8b.png",
     "static/media/8.png": "/yjmadeira/static/media/8.c2f6762dece4aee97fb6.png",
+    "static/media/background-contact1.jpg": "/yjmadeira/static/media/background-contact1.8c190e3193ea5a28d9de.jpg",
     "static/media/18.png": "/yjmadeira/static/media/18.4c3b217abc3f0d4da337.png",
     "static/media/logo_header.jpg": "/yjmadeira/static/media/logo_header.752030c68a543fca91ae.jpg",
     "static/media/slick.svg": "/yjmadeira/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -32,10 +33,10 @@
     "static/media/slick.woff": "/yjmadeira/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/yjmadeira/index.html",
     "main.05fc5e08.css.map": "/yjmadeira/static/css/main.05fc5e08.css.map",
-    "main.548e3d92.js.map": "/yjmadeira/static/js/main.548e3d92.js.map"
+    "main.7c120012.js.map": "/yjmadeira/static/js/main.7c120012.js.map"
   },
   "entrypoints": [
     "static/css/main.05fc5e08.css",
-    "static/js/main.548e3d92.js"
+    "static/js/main.7c120012.js"
   ]
 }
