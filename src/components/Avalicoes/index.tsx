@@ -48,7 +48,7 @@ export class Avaliacoes extends Component<ISlideProps> {
             <TitleSection variant='white'>Avalições de nossos clientes</TitleSection>
             <Linha />
         </div>
-        <div className="slider">
+        <div className="slider pb-3">
             <Slider {...settings}>
               {this.props.avaliacoes.map((avaliacoes, index) => (
                   <div>

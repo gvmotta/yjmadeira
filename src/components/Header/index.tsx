@@ -11,7 +11,7 @@ export default function HeaderBox() {
         <div className='upper'>
             <div className="contact">
                 <FontAwesomeIcon icon={faWhatsapp} className='whatsapp icon'/>
-                <p>(11) 91111-1111</p>
+                <p>(11) 94027-5238</p>
             </div>
             <div className="contact">
                 <FontAwesomeIcon icon={faEnvelope} className='icon'/>

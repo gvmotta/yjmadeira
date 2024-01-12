@@ -208,6 +208,7 @@ export const TitleSection = styled.h4<ITitleSectionStyled>`
 export const Linha = styled.hr<IHrStyled>`
     margin: 0 0 10% 0;
     opacity: 1;
+    width: 60%;
     margin: 0 20%;
     border: 2px solid ${colors.white};
     ${({variant}) => variant == 'orangePrincipal' && css`

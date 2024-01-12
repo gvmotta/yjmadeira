@@ -1,6 +1,6 @@
 export interface IForm {
-    example: string,
-    cidade: string,
-    primeiroNome: string,
+    mensagem: string,
+    email: string,
+    nome: string,
     cellphone: string
 }
